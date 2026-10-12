@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Power Alert</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --accent: #067265;
+      --border: #e4e4e7;
+      --tab: #eef6f5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --card: #1e1e1e;
+        --text: #f2f2f2;
+        --muted: #b0b0b0;
+        --accent: #5ec4b6;
+        --border: #333;
+        --tab: #1a2a28;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 1.5rem 1.25rem;
+    }
+    header h1 { margin: 0 0 0.35rem; font-size: 1.5rem; }
+    header p { margin: 0; opacity: 0.95; font-size: 0.95rem; }
+    main { max-width: 46rem; margin: 0 auto; padding: 1.25rem; }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0 0 1.25rem;
+      padding: 0;
+      list-style: none;
+    }
+    .tabs button {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 0.4rem 0.85rem;
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .tabs button[aria-selected="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .tabs button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .panel {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+    }
+    .panel.active { display: block; }
+    .panel[dir="rtl"] { text-align: right; }
+    h2 { margin-top: 0; font-size: 1.25rem; color: var(--accent); }
+    h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    ul { padding-inline-start: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    .muted { color: var(--muted); font-size: 0.92rem; }
+    a { color: var(--accent); }
+    footer {
+      max-width: 46rem;
+      margin: 0 auto 2rem;
+      padding: 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Power Alert</h1>
+    <p>Privacy Policy</p>
+  </header>
+
+  <main>
+    <div class="tabs" role="tablist" aria-label="Language">
+      <button type="button" role="tab" id="tab-en" aria-controls="panel-en" data-lang="en">English</button>
+      <button type="button" role="tab" id="tab-fr" aria-controls="panel-fr" data-lang="fr">Français</button>
+      <button type="button" role="tab" id="tab-de" aria-controls="panel-de" data-lang="de">Deutsch</button>
+      <button type="button" role="tab" id="tab-es" aria-controls="panel-es" data-lang="es">Español</button>
+      <button type="button" role="tab" id="tab-it" aria-controls="panel-it" data-lang="it">Italiano</button>
+      <button type="button" role="tab" id="tab-pt" aria-controls="panel-pt" data-lang="pt">Português</button>
+      <button type="button" role="tab" id="tab-pl" aria-controls="panel-pl" data-lang="pl">Polski</button>
+      <button type="button" role="tab" id="tab-ru" aria-controls="panel-ru" data-lang="ru">Русский</button>
+      <button type="button" role="tab" id="tab-ar" aria-controls="panel-ar" data-lang="ar">العربية</button>
+      <button type="button" role="tab" id="tab-ja" aria-controls="panel-ja" data-lang="ja">日本語</button>
+      <button type="button" role="tab" id="tab-zh-CN" aria-controls="panel-zh-CN" data-lang="zh-CN">中文（简体）</button>
+      <button type="button" role="tab" id="tab-zh-TW" aria-controls="panel-zh-TW" data-lang="zh-TW">中文（繁體）</button>
+    </div>
+
+    <!-- EN -->
+    <section id="panel-en" class="panel" role="tabpanel" aria-labelledby="tab-en" lang="en">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: 12 October 2026</p>
+      <p>This policy applies to the Android app <strong>Power Alert</strong> (package <code>com.solunne.poweralert</code>), also known in French as <em>Alerte secteur</em>.</p>
+      <h3>1. Who I am</h3>
+      <p>I am <strong>Sébastien Moreau</strong>, the developer of this app. Privacy contact: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. What the app does</h3>
+      <p>Power Alert monitors whether an Android device is plugged into mains power. When a power loss (or restore) is confirmed, it can send alert SMS to phone numbers you configure. Monitoring runs as a foreground service with an ongoing notification.</p>
+      <h3>3. SMS — send only</h3>
+      <ul>
+        <li>The app requests only the <strong>SEND_SMS</strong> permission.</li>
+        <li>It sends alert (or test) SMS <strong>only</strong> to numbers you entered.</li>
+        <li>It does <strong>not</strong> read your inbox, conversations, or incoming SMS.</li>
+        <li>It does <strong>not</strong> share SMS content or your numbers with any application server.</li>
+        <li>It does <strong>not</strong> use SMS to geolocate or track you.</li>
+        <li>Your mobile carrier treats outbound SMS like any other SMS (charges may apply).</li>
+      </ul>
+      <h3>4. Data stored on your device</h3>
+      <p>The following stay <strong>on your phone only</strong> (app local storage):</p>
+      <ul>
+        <li>Recipients, SMS templates, location label, settings</li>
+        <li>Monitoring state, SMS counters</li>
+        <li>Outbound SMS history (Premium)</li>
+        <li>Terms acceptance version, local Premium unlock flag</li>
+      </ul>
+      <p>This information is <strong>not</strong> uploaded to any remote application server. Uninstalling the app removes it (subject to Android backup settings if any).</p>
+      <h3>5. Internet, Google Play and Premium</h3>
+      <ul>
+        <li>Day-to-day monitoring and SMS are designed to work without any server.</li>
+        <li>Internet is used for <strong>Premium purchase / restore</strong> via Google Play Billing (product <code>premium_unlock</code>).</li>
+        <li>Google may process payment and account data under <a href="https://policies.google.com/privacy" rel="noopener">Google’s Privacy Policy</a>.</li>
+        <li>Install statistics available to the developer come from <strong>Google Play Console</strong> only — not from in-app analytics SDKs.</li>
+        <li>No ads, no sale of personal data.</li>
+      </ul>
+      <h3>6. Permissions (summary)</h3>
+      <ul>
+        <li><strong>SMS</strong> — send alerts to your recipients</li>
+        <li><strong>Notifications</strong> — ongoing monitoring status</li>
+        <li><strong>Foreground service (special use)</strong> — keep power monitoring active</li>
+        <li><strong>Boot completed</strong> — restart monitoring after reboot if enabled</li>
+        <li><strong>Battery optimization exemption (request)</strong> — reduce missed outages</li>
+        <li><strong>Internet / Play Billing</strong> — Premium purchase and restore</li>
+      </ul>
+      <h3>7. Children</h3>
+      <p>The app is not directed at children and is not intended for users under 13 (or the minimum age in your country).</p>
+      <h3>8. Changes</h3>
+      <p>I may update this policy when the app changes. The “Last updated” date will change. Continued use after an update means you accept the revised policy.</p>
+      <h3>9. Contact</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- FR -->
+    <section id="panel-fr" class="panel" role="tabpanel" aria-labelledby="tab-fr" lang="fr">
+      <h2>Politique de confidentialité</h2>
+      <p class="muted">Dernière mise à jour : 12 octobre 2026</p>
+      <p>Cette politique s’applique à l’application Android <strong>Power Alert</strong> (package <code>com.solunne.poweralert</code>), aussi appelée <em>Alerte secteur</em>.</p>
+      <h3>1. Qui je suis</h3>
+      <p>Je suis <strong>Sébastien Moreau</strong>, développeur de cette application. Contact : <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Fonctionnement</h3>
+      <p>Power Alert surveille si un appareil Android est alimenté par le secteur. En cas de coupure (ou de rétablissement) confirmée, elle peut envoyer des SMS d’alerte aux numéros que vous configurez. La surveillance tourne en service au premier plan avec une notification permanente.</p>
+      <h3>3. SMS — envoi uniquement</h3>
+      <ul>
+        <li>L’app demande uniquement l’autorisation <strong>SEND_SMS</strong>.</li>
+        <li>Elle envoie des SMS d’alerte (ou de test) <strong>uniquement</strong> aux numéros saisis.</li>
+        <li>Elle <strong>ne lit pas</strong> la boîte de réception, les conversations ni les SMS reçus.</li>
+        <li>Elle <strong>ne partage pas</strong> le contenu des SMS ni vos numéros avec un serveur applicatif.</li>
+        <li>Elle ne vous géolocalise pas et ne vous suit pas via les SMS.</li>
+        <li>L’opérateur traite ces SMS comme n’importe quel SMS sortant (facturation éventuelle).</li>
+      </ul>
+      <h3>4. Données sur l’appareil</h3>
+      <p>Restent <strong>uniquement sur votre téléphone</strong> (stockage local de l’application) :</p>
+      <ul>
+        <li>Destinataires, modèles SMS, libellé de lieu, réglages</li>
+        <li>État de surveillance, compteurs SMS</li>
+        <li>Historique des envois (Premium)</li>
+        <li>Version des CGU acceptée, statut Premium local</li>
+      </ul>
+      <p>Ces informations <strong>ne sont pas</strong> envoyées vers un serveur distant. La désinstallation les efface (sous réserve des sauvegardes Android le cas échéant).</p>
+      <h3>5. Internet, Google Play et Premium</h3>
+      <ul>
+        <li>La surveillance et les SMS sont conçus pour fonctionner sans serveur.</li>
+        <li>Internet sert à l’<strong>achat / restauration Premium</strong> via Google Play Billing (produit <code>premium_unlock</code>).</li>
+        <li>Google traite les données de paiement / compte selon la <a href="https://policies.google.com/privacy" rel="noopener">politique de confidentialité Google</a>.</li>
+        <li>Les statistiques d’installation accessibles au développeur viennent de la <strong>Play Console</strong> uniquement.</li>
+        <li>Pas de publicité, pas de revente de données personnelles.</li>
+      </ul>
+      <h3>6. Autorisations (résumé)</h3>
+      <ul>
+        <li><strong>SMS</strong> — envoyer les alertes</li>
+        <li><strong>Notifications</strong> — état de la surveillance</li>
+        <li><strong>Service au premier plan (special use)</strong> — maintenir la surveillance</li>
+        <li><strong>Démarrage</strong> — relancer après reboot si actif</li>
+        <li><strong>Exemption batterie (demande)</strong> — limiter les coupures manquées</li>
+        <li><strong>Internet / Play Billing</strong> — achat et restauration Premium</li>
+      </ul>
+      <h3>7. Mineurs</h3>
+      <p>L’application n’est pas destinée aux enfants et ne s’adresse pas aux moins de 13 ans (ou l’âge minimum applicable dans votre pays).</p>
+      <h3>8. Modifications</h3>
+      <p>Cette politique peut évoluer avec l’app. La date en tête de page sera mise à jour. L’usage continu après une modification vaut acceptation de la nouvelle version.</p>
+      <h3>9. Contact</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- DE -->
+    <section id="panel-de" class="panel" role="tabpanel" aria-labelledby="tab-de" lang="de">
+      <h2>Datenschutzerklärung</h2>
+      <p class="muted">Zuletzt aktualisiert: 12. Oktober 2026</p>
+      <p>Diese Erklärung gilt für die Android-App <strong>Power Alert</strong> (Paket <code>com.solunne.poweralert</code>), auf Deutsch auch <em>Netz-Alarm</em>.</p>
+      <h3>1. Wer ich bin</h3>
+      <p>Ich bin <strong>Sébastien Moreau</strong>, der Entwickler dieser App. Kontakt: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Zweck der App</h3>
+      <p>Power Alert überwacht, ob ein Android-Gerät am Netzstrom hängt. Bei bestätigtem Ausfall (oder Wiederkehr) können Alarm-SMS an von Ihnen hinterlegte Nummern gesendet werden. Die Überwachung läuft als Vordergrunddienst mit Dauerbenachrichtigung.</p>
+      <h3>3. SMS — nur Senden</h3>
+      <ul>
+        <li>Nur die Berechtigung <strong>SEND_SMS</strong>.</li>
+        <li>Alarm- bzw. Test-SMS nur an Ihre Nummern.</li>
+        <li>Kein Lesen des Posteingangs oder eingehender SMS.</li>
+        <li>Kein Teilen von SMS-Inhalten oder Nummern mit einem App-Server.</li>
+        <li>Keine Ortung oder Verfolgung über SMS.</li>
+        <li>Der Netzbetreiber behandelt ausgehende SMS wie üblich (ggf. Kosten).</li>
+      </ul>
+      <h3>4. Daten auf dem Gerät</h3>
+      <p>Nur lokal auf Ihrem Telefon (App-Speicher): Empfänger, Vorlagen, Ort, Einstellungen, Überwachungsstatus, Zähler, SMS-Verlauf (Premium), AGB-Version, lokaler Premium-Status. Kein Upload auf einen entfernten App-Server.</p>
+      <h3>5. Internet, Google Play und Premium</h3>
+      <ul>
+        <li>Überwachung und SMS sind für den Betrieb ohne Server ausgelegt.</li>
+        <li>Internet für <strong>Premium-Kauf/-Wiederherstellung</strong> über Google Play Billing (<code>premium_unlock</code>).</li>
+        <li>Zahlungsdaten: <a href="https://policies.google.com/privacy" rel="noopener">Google-Datenschutz</a>.</li>
+        <li>Installationsstatistiken nur über die <strong>Play Console</strong>.</li>
+        <li>Keine Werbung, kein Verkauf personenbezogener Daten.</li>
+      </ul>
+      <h3>6. Berechtigungen (Kurz)</h3>
+      <ul>
+        <li><strong>SMS</strong> — Alarme senden</li>
+        <li><strong>Benachrichtigungen</strong> — Status der Überwachung</li>
+        <li><strong>Vordergrunddienst (special use)</strong> — Überwachung aktiv halten</li>
+        <li><strong>Boot</strong> — Neustart nach Reboot</li>
+        <li><strong>Akku-Optimierung (Anfrage)</strong> — weniger verpasste Ausfälle</li>
+        <li><strong>Internet / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. Kinder</h3>
+      <p>Nicht für Kinder unter 13 (bzw. dem geltenden Mindestalter) bestimmt.</p>
+      <h3>8. Änderungen</h3>
+      <p>Diese Erklärung kann sich ändern; das Datum oben wird aktualisiert.</p>
+      <h3>9. Kontakt</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- ES -->
+    <section id="panel-es" class="panel" role="tabpanel" aria-labelledby="tab-es" lang="es">
+      <h2>Política de privacidad</h2>
+      <p class="muted">Última actualización: 12 de octubre de 2026</p>
+      <p>Aplicable a la app Android <strong>Power Alert</strong> (paquete <code>com.solunne.poweralert</code>), también <em>Alerta de red eléctrica</em>.</p>
+      <h3>1. Quién soy</h3>
+      <p>Soy <strong>Sébastien Moreau</strong>, el desarrollador de esta aplicación. Contacto: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Función de la app</h3>
+      <p>Supervisa si el dispositivo está conectado a la red eléctrica. Si se confirma un corte (o restablecimiento), puede enviar SMS de alerta a los números que configure. La supervisión es un servicio en primer plano con notificación permanente.</p>
+      <h3>3. SMS — solo envío</h3>
+      <ul>
+        <li>Solo permiso <strong>SEND_SMS</strong>.</li>
+        <li>SMS de alerta o prueba solo a sus números.</li>
+        <li>No lee la bandeja de entrada ni SMS entrantes.</li>
+        <li>No comparte el contenido ni los números con un servidor de la app.</li>
+        <li>No geolocaliza ni rastrea mediante SMS.</li>
+        <li>El operador factura los SMS salientes como de costumbre.</li>
+      </ul>
+      <h3>4. Datos en el dispositivo</h3>
+      <p>Solo en su teléfono (almacenamiento local): destinatarios, plantillas, lugar, ajustes, estado, contadores, historial (Premium), versión de condiciones, Premium local. Sin envío a un servidor remoto de la app.</p>
+      <h3>5. Internet, Google Play y Premium</h3>
+      <ul>
+        <li>La supervisión y los SMS están pensados para funcionar sin servidor.</li>
+        <li>Internet para <strong>compra/restauración Premium</strong> con Google Play Billing (<code>premium_unlock</code>).</li>
+        <li>Datos de pago: <a href="https://policies.google.com/privacy" rel="noopener">Política de Google</a>.</li>
+        <li>Estadísticas de instalación solo vía <strong>Play Console</strong>.</li>
+        <li>Sin anuncios ni venta de datos personales.</li>
+      </ul>
+      <h3>6. Permisos (resumen)</h3>
+      <ul>
+        <li><strong>SMS</strong> — enviar alertas</li>
+        <li><strong>Notificaciones</strong> — estado de supervisión</li>
+        <li><strong>Servicio en primer plano (special use)</strong></li>
+        <li><strong>Arranque</strong> — reanudar tras reinicio</li>
+        <li><strong>Exención de batería (solicitud)</strong></li>
+        <li><strong>Internet / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. Menores</h3>
+      <p>No dirigida a menores de 13 años (o la edad mínima aplicable).</p>
+      <h3>8. Cambios</h3>
+      <p>La política puede actualizarse; cambiará la fecha arriba.</p>
+      <h3>9. Contacto</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- IT -->
+    <section id="panel-it" class="panel" role="tabpanel" aria-labelledby="tab-it" lang="it">
+      <h2>Informativa sulla privacy</h2>
+      <p class="muted">Ultimo aggiornamento: 12 ottobre 2026</p>
+      <p>Si applica all’app Android <strong>Power Alert</strong> (package <code>com.solunne.poweralert</code>), anche <em>Allerta corrente</em>.</p>
+      <h3>1. Chi sono</h3>
+      <p>Sono <strong>Sébastien Moreau</strong>, lo sviluppatore di questa app. Contatto: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Funzionamento</h3>
+      <p>Monitora se il dispositivo è collegato alla rete elettrica. In caso di interruzione (o ripristino) confermata può inviare SMS di allerta ai numeri configurati. Il monitoraggio è un servizio in primo piano con notifica permanente.</p>
+      <h3>3. SMS — solo invio</h3>
+      <ul>
+        <li>Solo autorizzazione <strong>SEND_SMS</strong>.</li>
+        <li>SMS di allerta/test solo ai suoi numeri.</li>
+        <li>Non legge la posta in arrivo né gli SMS ricevuti.</li>
+        <li>Non condivide contenuti o numeri con un server dell’app.</li>
+        <li>Non geolocalizza né traccia tramite SMS.</li>
+        <li>L’operatore tratta gli SMS in uscita come di consueto.</li>
+      </ul>
+      <h3>4. Dati sul dispositivo</h3>
+      <p>Solo sul telefono (archiviazione locale): destinatari, modelli, luogo, impostazioni, stato, contatori, cronologia (Premium), versione condizioni, Premium locale. Nessun invio a un server remoto dell’app.</p>
+      <h3>5. Internet, Google Play e Premium</h3>
+      <ul>
+        <li>Monitoraggio e SMS pensati per funzionare senza server.</li>
+        <li>Internet per <strong>acquisto/ripristino Premium</strong> via Play Billing (<code>premium_unlock</code>).</li>
+        <li>Dati di pagamento: <a href="https://policies.google.com/privacy" rel="noopener">Privacy Google</a>.</li>
+        <li>Statistiche di installazione solo da <strong>Play Console</strong>.</li>
+        <li>Niente pubblicità né vendita di dati personali.</li>
+      </ul>
+      <h3>6. Autorizzazioni (sintesi)</h3>
+      <ul>
+        <li><strong>SMS</strong> — inviare allerte</li>
+        <li><strong>Notifiche</strong> — stato monitoraggio</li>
+        <li><strong>Servizio in primo piano (special use)</strong></li>
+        <li><strong>Avvio</strong> — ripresa dopo reboot</li>
+        <li><strong>Esenzione batteria (richiesta)</strong></li>
+        <li><strong>Internet / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. Minori</h3>
+      <p>Non destinata a minori di 13 anni (o età minima applicabile).</p>
+      <h3>8. Modifiche</h3>
+      <p>L’informativa può cambiare; la data in alto sarà aggiornata.</p>
+      <h3>9. Contatto</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- PT -->
+    <section id="panel-pt" class="panel" role="tabpanel" aria-labelledby="tab-pt" lang="pt">
+      <h2>Política de privacidade</h2>
+      <p class="muted">Última atualização: 12 de outubro de 2026</p>
+      <p>Aplica-se à app Android <strong>Power Alert</strong> (package <code>com.solunne.poweralert</code>), também <em>Alerta de energia</em>.</p>
+      <h3>1. Quem sou</h3>
+      <p>Sou <strong>Sébastien Moreau</strong>, o programador desta aplicação. Contacto: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Função da app</h3>
+      <p>Monitoriza se o dispositivo está ligado à corrente. Em caso de falha (ou restabelecimento) confirmada, pode enviar SMS de alerta para os números que configurar. A monitorização corre em primeiro plano com notificação permanente.</p>
+      <h3>3. SMS — apenas envio</h3>
+      <ul>
+        <li>Apenas a permissão <strong>SEND_SMS</strong>.</li>
+        <li>SMS de alerta/teste apenas para os seus números.</li>
+        <li>Não lê a caixa de entrada nem SMS recebidos.</li>
+        <li>Não partilha conteúdo nem números com um servidor da app.</li>
+        <li>Não geolocaliza nem segue via SMS.</li>
+        <li>O operador trata os SMS de saída normalmente (custos possíveis).</li>
+      </ul>
+      <h3>4. Dados no dispositivo</h3>
+      <p>Apenas no telemóvel (armazenamento local): destinatários, modelos, local, definições, estado, contadores, histórico (Premium), versão dos termos, Premium local. Sem envio para um servidor remoto da app.</p>
+      <h3>5. Internet, Google Play e Premium</h3>
+      <ul>
+        <li>Monitorização e SMS pensados para funcionar sem servidor.</li>
+        <li>Internet para <strong>compra/restauro Premium</strong> via Play Billing (<code>premium_unlock</code>).</li>
+        <li>Dados de pagamento: <a href="https://policies.google.com/privacy" rel="noopener">Privacidade Google</a>.</li>
+        <li>Estatísticas de instalação só pela <strong>Play Console</strong>.</li>
+        <li>Sem anúncios nem venda de dados pessoais.</li>
+      </ul>
+      <h3>6. Permissões (resumo)</h3>
+      <ul>
+        <li><strong>SMS</strong> — enviar alertas</li>
+        <li><strong>Notificações</strong> — estado da monitorização</li>
+        <li><strong>Serviço em primeiro plano (special use)</strong></li>
+        <li><strong>Arranque</strong> — retomar após reboot</li>
+        <li><strong>Isenção de bateria (pedido)</strong></li>
+        <li><strong>Internet / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. Menores</h3>
+      <p>Não destinada a menores de 13 anos (ou idade mínima aplicável).</p>
+      <h3>8. Alterações</h3>
+      <p>A política pode mudar; a data no topo será atualizada.</p>
+      <h3>9. Contacto</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- PL -->
+    <section id="panel-pl" class="panel" role="tabpanel" aria-labelledby="tab-pl" lang="pl">
+      <h2>Polityka prywatności</h2>
+      <p class="muted">Ostatnia aktualizacja: 12 października 2026</p>
+      <p>Dotyczy aplikacji Android <strong>Power Alert</strong> (pakiet <code>com.solunne.poweralert</code>), także <em>Alert zasilania</em>.</p>
+      <h3>1. Kim jestem</h3>
+      <p>Jestem <strong>Sébastien Moreau</strong>, twórcą tej aplikacji. Kontakt: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Działanie aplikacji</h3>
+      <p>Monitoruje zasilanie sieciowe urządzenia. Po potwierdzeniu zaniku (lub przywrócenia) może wysłać SMS-y alertowe na numery, które skonfigurujesz. Monitoring działa jako usługa na pierwszym planie ze stałym powiadomieniem.</p>
+      <h3>3. SMS — tylko wysyłanie</h3>
+      <ul>
+        <li>Tylko uprawnienie <strong>SEND_SMS</strong>.</li>
+        <li>SMS-y alertowe/testowe tylko na Twoje numery.</li>
+        <li>Bez odczytu skrzynki ani SMS-ów przychodzących.</li>
+        <li>Bez udostępniania treści lub numerów serwerowi aplikacji.</li>
+        <li>Bez geolokalizacji ani śledzenia przez SMS.</li>
+        <li>Operator rozlicza SMS-y wychodzące jak zwykle.</li>
+      </ul>
+      <h3>4. Dane na urządzeniu</h3>
+      <p>Tylko na telefonie (pamięć lokalna aplikacji): odbiorcy, szablony, lokalizacja, ustawienia, stan, liczniki, historia (Premium), wersja regulaminu, lokalny Premium. Bez wysyłki na zdalny serwer aplikacji.</p>
+      <h3>5. Internet, Google Play i Premium</h3>
+      <ul>
+        <li>Monitoring i SMS-y zaprojektowane do działania bez serwera.</li>
+        <li>Internet do <strong>zakupu/przywracania Premium</strong> przez Play Billing (<code>premium_unlock</code>).</li>
+        <li>Dane płatności: <a href="https://policies.google.com/privacy" rel="noopener">Polityka Google</a>.</li>
+        <li>Statystyki instalacji tylko z <strong>Play Console</strong>.</li>
+        <li>Bez reklam i sprzedaży danych osobowych.</li>
+      </ul>
+      <h3>6. Uprawnienia (skrót)</h3>
+      <ul>
+        <li><strong>SMS</strong> — wysyłanie alertów</li>
+        <li><strong>Powiadomienia</strong> — status monitoringu</li>
+        <li><strong>Usługa na pierwszym planie (special use)</strong></li>
+        <li><strong>Start systemu</strong> — wznowienie po restarcie</li>
+        <li><strong>Wyłączenie optymalizacji baterii (prośba)</strong></li>
+        <li><strong>Internet / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. Dzieci</h3>
+      <p>Nie jest skierowana do osób poniżej 13. roku życia (lub innego wieku minimalnego).</p>
+      <h3>8. Zmiany</h3>
+      <p>Polityka może się zmieniać; data u góry zostanie zaktualizowana.</p>
+      <h3>9. Kontakt</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- RU -->
+    <section id="panel-ru" class="panel" role="tabpanel" aria-labelledby="tab-ru" lang="ru">
+      <h2>Политика конфиденциальности</h2>
+      <p class="muted">Обновлено: 12 октября 2026</p>
+      <p>Применяется к Android-приложению <strong>Power Alert</strong> (пакет <code>com.solunne.poweralert</code>), также <em>Оповещение о питании</em>.</p>
+      <h3>1. Кто я</h3>
+      <p>Я — <strong>Sébastien Moreau</strong>, разработчик этого приложения. Контакт: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. Назначение</h3>
+      <p>Следит, подключено ли устройство к сети. При подтверждённом отключении (или восстановлении) может отправлять SMS на указанные вами номера. Мониторинг работает как служба переднего плана с постоянным уведомлением.</p>
+      <h3>3. SMS — только отправка</h3>
+      <ul>
+        <li>Только разрешение <strong>SEND_SMS</strong>.</li>
+        <li>Оповещения/тесты только на ваши номера.</li>
+        <li>Не читает входящие и переписку.</li>
+        <li>Не передаёт содержимое SMS или номера на сервер приложения.</li>
+        <li>Не использует SMS для геолокации или слежения.</li>
+        <li>Оператор тарифицирует исходящие SMS как обычно.</li>
+      </ul>
+      <h3>4. Данные на устройстве</h3>
+      <p>Только на телефоне (локальное хранилище приложения): получатели, шаблоны, место, настройки, состояние, счётчики, история (Premium), версия условий, локальный Premium. Без отправки на удалённый сервер приложения.</p>
+      <h3>5. Интернет, Google Play и Premium</h3>
+      <ul>
+        <li>Мониторинг и SMS рассчитаны на работу без сервера.</li>
+        <li>Интернет для <strong>покупки/восстановления Premium</strong> через Play Billing (<code>premium_unlock</code>).</li>
+        <li>Платёжные данные: <a href="https://policies.google.com/privacy" rel="noopener">политика Google</a>.</li>
+        <li>Статистика установок только из <strong>Play Console</strong>.</li>
+        <li>Без рекламы и продажи персональных данных.</li>
+      </ul>
+      <h3>6. Разрешения (кратко)</h3>
+      <ul>
+        <li><strong>SMS</strong> — отправка оповещений</li>
+        <li><strong>Уведомления</strong> — статус мониторинга</li>
+        <li><strong>Служба переднего плана (special use)</strong></li>
+        <li><strong>Загрузка</strong> — возобновление после перезагрузки</li>
+        <li><strong>Исключение из оптимизации батареи (запрос)</strong></li>
+        <li><strong>Интернет / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. Дети</h3>
+      <p>Не предназначено для лиц младше 13 лет (или иного минимального возраста).</p>
+      <h3>8. Изменения</h3>
+      <p>Политика может обновляться; дата сверху изменится.</p>
+      <h3>9. Контакт</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- AR -->
+    <section id="panel-ar" class="panel" role="tabpanel" aria-labelledby="tab-ar" lang="ar" dir="rtl">
+      <h2>سياسة الخصوصية</h2>
+      <p class="muted">آخر تحديث: 12 أكتوبر 2026</p>
+      <p>تنطبق على تطبيق Android <strong>Power Alert</strong> (الحزمة <code>com.solunne.poweralert</code>)، ويعرف أيضًا بـ <em>تنبيه انقطاع الكهرباء</em>.</p>
+      <h3>1. من أنا</h3>
+      <p>أنا <strong>Sébastien Moreau</strong>، مطوّر هذا التطبيق. للتواصل: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. وظيفة التطبيق</h3>
+      <p>يراقب اتصال الجهاز بالطاقة الكهربائية. عند تأكيد انقطاع (أو عودة) التيار يمكن إرسال رسائل SMS تنبيهية إلى الأرقام التي تضبطها. تعمل المراقبة كخدمة في المقدمة مع إشعار دائم.</p>
+      <h3>3. الرسائل — إرسال فقط</h3>
+      <ul>
+        <li>يطلب إذن <strong>SEND_SMS</strong> فقط.</li>
+        <li>يرسل تنبيهات/اختبارات فقط إلى أرقامك.</li>
+        <li>لا يقرأ الوارد أو الرسائل الواردة.</li>
+        <li>لا يشارك محتوى الرسائل أو الأرقام مع أي خادم للتطبيق.</li>
+        <li>لا يستخدم الرسائل للتتبع أو تحديد الموقع.</li>
+        <li>يعامل المشغّل الرسائل الصادرة كالمعتاد (قد تُحتسب رسوم).</li>
+      </ul>
+      <h3>4. البيانات على الجهاز</h3>
+      <p>تبقى على هاتفك فقط (تخزين محلي للتطبيق): المستلمون، القوالب، المكان، الإعدادات، الحالة، العدادات، السجل (Premium)، إصدار الشروط، حالة Premium المحلية. لا تُرفع إلى خادم بعيد للتطبيق.</p>
+      <h3>5. الإنترنت وGoogle Play وPremium</h3>
+      <ul>
+        <li>المراقبة والرسائل مصمّمتان للعمل دون خادم.</li>
+        <li>الإنترنت لـ<strong>شراء/استعادة Premium</strong> عبر Play Billing (<code>premium_unlock</code>).</li>
+        <li>بيانات الدفع وفق <a href="https://policies.google.com/privacy" rel="noopener">سياسة Google</a>.</li>
+        <li>إحصاءات التثبيت عبر <strong>Play Console</strong> فقط.</li>
+        <li>لا إعلانات ولا بيع لبيانات شخصية.</li>
+      </ul>
+      <h3>6. الأذونات (موجز)</h3>
+      <ul>
+        <li><strong>SMS</strong> — إرسال التنبيهات</li>
+        <li><strong>الإشعارات</strong> — حالة المراقبة</li>
+        <li><strong>خدمة المقدمة (special use)</strong></li>
+        <li><strong>بدء التشغيل</strong> — الاستئناف بعد إعادة التشغيل</li>
+        <li><strong>استثناء البطارية (طلب)</strong></li>
+        <li><strong>الإنترنت / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. الأطفال</h3>
+      <p>غير موجّه لمن هم دون 13 عامًا (أو الحد الأدنى المعمول به).</p>
+      <h3>8. التعديلات</h3>
+      <p>قد تتغير السياسة؛ سيُحدَّث التاريخ أعلاه.</p>
+      <h3>9. التواصل</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- JA -->
+    <section id="panel-ja" class="panel" role="tabpanel" aria-labelledby="tab-ja" lang="ja">
+      <h2>プライバシーポリシー</h2>
+      <p class="muted">最終更新: 2026年10月12日</p>
+      <p>Androidアプリ <strong>Power Alert</strong>（パッケージ <code>com.solunne.poweralert</code>、日本語名 <em>電源アラート</em>）に適用されます。</p>
+      <h3>1. 私について</h3>
+      <p>私は <strong>Sébastien Moreau</strong>、このアプリの開発者です。連絡先: <a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. アプリの内容</h3>
+      <p>端末が商用電源に接続されているかを監視します。停電（または復旧）が確認されると、設定した番号へ警告SMSを送信できます。監視は常時通知付きのフォアグラウンドサービスで動作します。</p>
+      <h3>3. SMS — 送信のみ</h3>
+      <ul>
+        <li><strong>SEND_SMS</strong> 権限のみを要求します。</li>
+        <li>警告／テストSMSは入力した番号のみへ送信します。</li>
+        <li>受信トレイや着信SMSは読み取りません。</li>
+        <li>SMS内容や番号をアプリのサーバーへ共有しません。</li>
+        <li>SMSによる位置追跡は行いません。</li>
+        <li>送信SMSは通常どおり通信事業者により課金される場合があります。</li>
+      </ul>
+      <h3>4. 端末上のデータ</h3>
+      <p>端末内のみ（アプリのローカル保存）: 宛先、定型文、場所、設定、監視状態、カウンタ、送信履歴（Premium）、利用規約の版、ローカルPremium状態。アプリのリモートサーバーへは送信しません。</p>
+      <h3>5. インターネット、Google Play、Premium</h3>
+      <ul>
+        <li>監視とSMSはサーバーなしで動作するよう設計されています。</li>
+        <li>インターネットは Google Play Billing による <strong>Premium購入／復元</strong>（<code>premium_unlock</code>）に使用します。</li>
+        <li>支払いデータは <a href="https://policies.google.com/privacy" rel="noopener">Googleのプライバシーポリシー</a> に従います。</li>
+        <li>インストール統計は <strong>Play Console</strong> のみです。</li>
+        <li>広告なし、個人データの販売なし。</li>
+      </ul>
+      <h3>6. 権限（概要）</h3>
+      <ul>
+        <li><strong>SMS</strong> — 警告送信</li>
+        <li><strong>通知</strong> — 監視状態</li>
+        <li><strong>フォアグラウンドサービス（special use）</strong></li>
+        <li><strong>起動完了</strong> — 再起動後の再開</li>
+        <li><strong>バッテリー最適化の除外（要求）</strong></li>
+        <li><strong>インターネット / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. 子ども</h3>
+      <p>13歳未満（または各国の最低年齢）向けではありません。</p>
+      <h3>8. 変更</h3>
+      <p>本ポリシーは変更されることがあり、上部の日付が更新されます。</p>
+      <h3>9. 連絡先</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- zh-CN -->
+    <section id="panel-zh-CN" class="panel" role="tabpanel" aria-labelledby="tab-zh-CN" lang="zh-CN">
+      <h2>隐私政策</h2>
+      <p class="muted">最近更新：2026年10月12日</p>
+      <p>适用于 Android 应用 <strong>Power Alert</strong>（包名 <code>com.solunne.poweralert</code>，中文名 <em>电力警报</em>）。</p>
+      <h3>1. 我是谁</h3>
+      <p>我是 <strong>Sébastien Moreau</strong>，本应用的开发者。联系：<a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. 应用功能</h3>
+      <p>监测设备是否接入市电。确认断电（或来电）后，可向您配置的号码发送警报短信。监测以前台服务运行并显示常驻通知。</p>
+      <h3>3. 短信 — 仅发送</h3>
+      <ul>
+        <li>仅申请 <strong>SEND_SMS</strong> 权限。</li>
+        <li>仅向您输入的号码发送警报/测试短信。</li>
+        <li>不读取收件箱或收到的短信。</li>
+        <li>不将短信内容或号码共享给任何应用服务器。</li>
+        <li>不通过短信进行定位或追踪。</li>
+        <li>运营商按普通出站短信计费（可能产生费用）。</li>
+      </ul>
+      <h3>4. 设备上的数据</h3>
+      <p>仅保存在手机本地（应用本地存储）：收件人、模板、地点、设置、监测状态、计数器、发送历史（Premium）、条款版本、本地 Premium 状态。不会上传到应用的远程服务器。</p>
+      <h3>5. 网络、Google Play 与 Premium</h3>
+      <ul>
+        <li>监测与短信设计为无需服务器即可运行。</li>
+        <li>网络用于通过 Google Play Billing <strong>购买/恢复 Premium</strong>（<code>premium_unlock</code>）。</li>
+        <li>支付数据遵循 <a href="https://policies.google.com/privacy" rel="noopener">Google 隐私政策</a>。</li>
+        <li>安装统计仅来自 <strong>Play Console</strong>。</li>
+        <li>无广告、不出售个人数据。</li>
+      </ul>
+      <h3>6. 权限（摘要）</h3>
+      <ul>
+        <li><strong>短信</strong> — 发送警报</li>
+        <li><strong>通知</strong> — 监测状态</li>
+        <li><strong>前台服务（special use）</strong></li>
+        <li><strong>开机完成</strong> — 重启后恢复</li>
+        <li><strong>电池优化豁免（请求）</strong></li>
+        <li><strong>网络 / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. 儿童</h3>
+      <p>不面向 13 岁以下（或当地最低年龄）用户。</p>
+      <h3>8. 变更</h3>
+      <p>本政策可能更新，顶部日期会随之更改。</p>
+      <h3>9. 联系</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+
+    <!-- zh-TW -->
+    <section id="panel-zh-TW" class="panel" role="tabpanel" aria-labelledby="tab-zh-TW" lang="zh-TW">
+      <h2>隱私權政策</h2>
+      <p class="muted">最近更新：2026年10月12日</p>
+      <p>適用於 Android 應用程式 <strong>Power Alert</strong>（套件 <code>com.solunne.poweralert</code>，中文名 <em>電力警報</em>）。</p>
+      <h3>1. 我是誰</h3>
+      <p>我是 <strong>Sébastien Moreau</strong>，本應用程式的開發者。聯絡：<a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+      <h3>2. 應用功能</h3>
+      <p>監測裝置是否接入市電。確認斷電（或復電）後，可向您設定的號碼傳送警報簡訊。監測以前景服務執行並顯示常駐通知。</p>
+      <h3>3. 簡訊 — 僅傳送</h3>
+      <ul>
+        <li>僅申請 <strong>SEND_SMS</strong> 權限。</li>
+        <li>僅向您輸入的號碼傳送警報／測試簡訊。</li>
+        <li>不讀取收件匣或收到的簡訊。</li>
+        <li>不將簡訊內容或號碼分享給任何應用伺服器。</li>
+        <li>不透過簡訊進行定位或追蹤。</li>
+        <li>電信業者依一般外寄簡訊計費（可能產生費用）。</li>
+      </ul>
+      <h3>4. 裝置上的資料</h3>
+      <p>僅保存在手機本機（應用本機儲存）：收件人、範本、地點、設定、監測狀態、計數器、傳送紀錄（Premium）、條款版本、本機 Premium 狀態。不會上傳至應用的遠端伺服器。</p>
+      <h3>5. 網路、Google Play 與 Premium</h3>
+      <ul>
+        <li>監測與簡訊設計為無需伺服器即可運作。</li>
+        <li>網路用於透過 Google Play Billing <strong>購買／還原 Premium</strong>（<code>premium_unlock</code>）。</li>
+        <li>付款資料遵循 <a href="https://policies.google.com/privacy" rel="noopener">Google 隱私權政策</a>。</li>
+        <li>安裝統計僅來自 <strong>Play Console</strong>。</li>
+        <li>無廣告、不販售個人資料。</li>
+      </ul>
+      <h3>6. 權限（摘要）</h3>
+      <ul>
+        <li><strong>簡訊</strong> — 傳送警報</li>
+        <li><strong>通知</strong> — 監測狀態</li>
+        <li><strong>前景服務（special use）</strong></li>
+        <li><strong>開機完成</strong> — 重啟後恢復</li>
+        <li><strong>電池優化豁免（請求）</strong></li>
+        <li><strong>網路 / Play Billing</strong> — Premium</li>
+      </ul>
+      <h3>7. 兒童</h3>
+      <p>非針對 13 歲以下（或當地最低年齡）使用者。</p>
+      <h3>8. 變更</h3>
+      <p>本政策可能更新，頂部日期會隨之變更。</p>
+      <h3>9. 聯絡</h3>
+      <p><a href="mailto:sebastien.moreau@gmail.com">sebastien.moreau@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    Power Alert · com.solunne.poweralert · Publish this page over HTTPS for Google Play Console.
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('[role="tabpanel"]'));
+      var supported = tabs.map(function (t) { return t.getAttribute("data-lang"); });
+
+      function activate(lang) {
+        if (supported.indexOf(lang) < 0) lang = "en";
+        tabs.forEach(function (tab) {
+          var on = tab.getAttribute("data-lang") === lang;
+          tab.setAttribute("aria-selected", on ? "true" : "false");
+          tab.tabIndex = on ? 0 : -1;
+        });
+        panels.forEach(function (panel) {
+          var on = panel.id === "panel-" + lang;
+          panel.classList.toggle("active", on);
+          panel.hidden = !on;
+        });
+        document.documentElement.lang = lang.indexOf("zh") === 0 ? lang : lang;
+        try {
+          history.replaceState(null, "", "#" + lang);
+        } catch (e) {}
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          activate(tab.getAttribute("data-lang"));
+        });
+      });
+
+      var hash = (location.hash || "").replace(/^#/, "");
+      var nav = (navigator.language || "en").replace("_", "-");
+      var guess = "en";
+      if (supported.indexOf(hash) >= 0) guess = hash;
+      else if (supported.indexOf(nav) >= 0) guess = nav;
+      else if (nav.toLowerCase().indexOf("zh-tw") === 0 || nav.toLowerCase().indexOf("zh-hk") === 0) guess = "zh-TW";
+      else if (nav.toLowerCase().indexOf("zh") === 0) guess = "zh-CN";
+      else {
+        var primary = nav.split("-")[0];
+        if (supported.indexOf(primary) >= 0) guess = primary;
+      }
+      activate(guess);
+    })();
+  </script>
+</body>
+</html>
